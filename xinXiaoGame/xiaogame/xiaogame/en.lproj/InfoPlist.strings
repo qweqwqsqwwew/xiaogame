@@ -1,0 +1,27 @@
+/* 
+  InfoPlist.strings
+  iPokerWork
+  Created by YaoMing on 2018/5/8.
+  Copyright © 2018年 YaoMing. All rights reserved.
+*/
+CFBundleDisplayName = "FunPocker";
+
+/*
+-------------------标题-------------------
+Fun Pocker Player
+楽しいポーカープレーヤー
+微微扑克~趣玩单机小游戏百家樂纸牌
+-------------------关键-------------------
+BlackJack,Card,Poker,Player,Game,Poker,Solitaire
+ブラックジャック,カード,ポーカー,プレイヤー,ゲーム,トランプ,ソリティア
+休闲娱乐云顶棋牌美高梅云上威尼斯人炸金花德州扑克经典黑杰克在线牛牛百家乐趣欢乐3D游戏大小世界路单号码AGKK扑克大乱斗龙虎斗腾讯麻将抖音快手吃鸡网狐21点
+休闲娱乐配对扑克云顶棋牌vip云上威尼斯人炸金花德州扑克经典黑杰克在线牛牛百家乐趣欢乐3D游戏大小世界路单号码AGKK扑克大乱斗龙虎斗腾讯麻将抖音快手吃鸡网狐21点
+-------------------网址-------------------
+http://www.brainiumstudios.com/site/blackjack.html
+-------------------描述-------------------
+This game is purely entertainment. The winning or losing of the game has nothing to do with real money. A simple and fun little game, come and try your luck! Game Goals: Start your brains and win as much as possible! How to start: After the game is loaded, you can start the game!
+
+このゲームは純粋にエンターテイメントです。ゲームの勝ち負けは本物のお金とは関係ありません。 シンプルで楽しい小さなゲーム、あなたの運を試してみてください！ ゲームの目標：あなたの頭脳を開始し、できるだけ多くを獲得！ 始める方法：ゲームがロードされた後、ゲームを開始することができます！
+
+本游戏纯属娱乐，游戏的输赢跟现实金钱没有任何关系．一款简单有趣的小游戏，快来试试自己的运气吧！ 游戏目标：开动你的脑筋，尽可能获得胜利吧！ 如何开始：游戏加载完毕后即可开始游戏！
+*/
