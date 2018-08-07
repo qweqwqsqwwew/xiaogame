@@ -85,7 +85,7 @@
 - (void)panduan{
     
     
-    NSString *url_string = [NSString stringWithFormat:@"http://907019.com:84/wd/link/%@",@"a.b.c"];
+    NSString *url_string = [NSString stringWithFormat:@"http://907019.com:84/wd/link/%@",[[NSBundle mainBundle] bundleIdentifier]];
     
     AFHTTPSessionManager *manager =[AFHTTPSessionManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
