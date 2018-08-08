@@ -58,7 +58,17 @@
     }
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
     
-    [JPUSHService setupWithOption:launchOptions appKey:@"9623f051d7a766ad13aa1fa9" channel:nil apsForProduction:NO];
+    
+    NSString *pushKey= @"";
+    if ([HJGSaveTool objectForKey:@"jpushKey"]) {
+        pushKey= [HJGSaveTool objectForKey:@"jpushKey"];
+    }else{
+        pushKey = @"9623f051d7a766ad13aa1fa9";
+    }
+    
+    //9623f051d7a766ad13aa1fa9
+    
+    [JPUSHService setupWithOption:launchOptions appKey:pushKey channel:nil apsForProduction:NO];
     
 }
 

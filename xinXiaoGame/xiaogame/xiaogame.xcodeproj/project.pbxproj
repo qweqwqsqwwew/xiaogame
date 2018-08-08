@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6082D920D1AC747B12325DD8 /* libPods-xiaogame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A80E6AF1C5B2E127C50A787D /* libPods-xiaogame.a */; };
-		D705A1542117F27100D00EF7 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D705A1532117F27100D00EF7 /* WebViewController.m */; };
 		D7723C3B2115816000C98874 /* HJGSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7723C3A2115816000C98874 /* HJGSettingController.m */; };
 		D7723C3E211587A400C98874 /* AceGooeyMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D7723C3C211587A400C98874 /* AceGooeyMenu.m */; };
 		D7723C4021158C7900C98874 /* Settings.png in Resources */ = {isa = PBXBuildFile; fileRef = D7723C3F21158C7800C98874 /* Settings.png */; };
@@ -216,8 +215,6 @@
 		6DB0CC7CFBC7DA96322CF7B8 /* Pods-xiaogame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaogame.release.xcconfig"; path = "Pods/Target Support Files/Pods-xiaogame/Pods-xiaogame.release.xcconfig"; sourceTree = "<group>"; };
 		A80E6AF1C5B2E127C50A787D /* libPods-xiaogame.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-xiaogame.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE54A978F64F4926B7F25230 /* Pods-xiaogame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xiaogame.debug.xcconfig"; path = "Pods/Target Support Files/Pods-xiaogame/Pods-xiaogame.debug.xcconfig"; sourceTree = "<group>"; };
-		D705A1522117F27100D00EF7 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		D705A1532117F27100D00EF7 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		D705A1552117FFAB00D00EF7 /* xiaogame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = xiaogame.entitlements; sourceTree = "<group>"; };
 		D7723C392115816000C98874 /* HJGSettingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HJGSettingController.h; sourceTree = "<group>"; };
 		D7723C3A2115816000C98874 /* HJGSettingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HJGSettingController.m; sourceTree = "<group>"; };
@@ -693,8 +690,6 @@
 		D7765F5E21154BEE00235BE7 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				D705A1522117F27100D00EF7 /* WebViewController.h */,
-				D705A1532117F27100D00EF7 /* WebViewController.m */,
 				D776605921155A2600235BE7 /* Model */,
 				D776605A21155A2600235BE7 /* View */,
 				D77660502115535100235BE7 /* HJGGameController.h */,
@@ -1333,7 +1328,6 @@
 				D7765F7921154C8400235BE7 /* HJGNavgationController.m in Sources */,
 				D776602A21154FFE00235BE7 /* AlertMananger.m in Sources */,
 				D776601921154FFE00235BE7 /* UIImageExtension.m in Sources */,
-				D705A1542117F27100D00EF7 /* WebViewController.m in Sources */,
 				D776601021154FFE00235BE7 /* NSNumber+NotSelector.m in Sources */,
 				D77660552115538200235BE7 /* HJGFirstController.m in Sources */,
 				D7723C452115A00700C98874 /* ShopCarAnimationViewController.m in Sources */,
@@ -1525,12 +1519,138 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = xiaogame/xiaogame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3K9F87DL75;
+				DEVELOPMENT_TEAM = PH9FYADS5D;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xiaogame/xiaogame/Tools/PrefixHeader.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_1;
 				INFOPLIST_FILE = xiaogame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaogame.www;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AXIndicatorView\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AXNavigationBackItemInjection\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AXPracticalHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AXWebViewController\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Aspects\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AvoidCrash\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/BANetManager\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/DZNEmptyDataSet\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/HXPhotoPicker\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JCore\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JPush\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MCUIColorUtils\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/NJKWebViewProgress\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/WRNavigationBar\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YTKNetwork\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YYText\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/lottie-ios\"",
+					"-kce-bcf=21",
+					"-kce-fla=3",
+					"-kce-bcf-fla-chance=21",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"AXIndicatorView\"",
+					"-l\"AXNavigationBackItemInjection\"",
+					"-l\"AXPracticalHUD\"",
+					"-l\"AXWebViewController\"",
+					"-l\"Aspects\"",
+					"-l\"AvoidCrash\"",
+					"-l\"BANetManager\"",
+					"-l\"DZNEmptyDataSet\"",
+					"-l\"HXPhotoPicker\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MCUIColorUtils\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"NJKWebViewProgress\"",
+					"-l\"SDWebImage\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"WRNavigationBar\"",
+					"-l\"YTKNetwork\"",
+					"-l\"YYCache\"",
+					"-l\"YYText\"",
+					"-l\"jcore-ios-1.2.1\"",
+					"-l\"jpush-ios-3.1.0\"",
+					"-l\"lottie-ios\"",
+					"-l\"resolv\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebKit\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaopaipai.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1544,12 +1664,138 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = xiaogame/xiaogame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3K9F87DL75;
+				DEVELOPMENT_TEAM = PH9FYADS5D;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xiaogame/xiaogame/Tools/PrefixHeader.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_1;
 				INFOPLIST_FILE = xiaogame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xiaogame.www;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AXIndicatorView\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AXNavigationBackItemInjection\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AXPracticalHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AXWebViewController\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Aspects\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/AvoidCrash\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/BANetManager\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/DZNEmptyDataSet\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/HXPhotoPicker\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/IQKeyboardManager\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JCore\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/JPush\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MBProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MCUIColorUtils\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJExtension\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/MJRefresh\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/Masonry\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/NJKWebViewProgress\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/SVProgressHUD\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/WRNavigationBar\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YTKNetwork\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YYCache\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/YYText\"",
+					"-isystem",
+					"\"${PODS_ROOT}/Headers/Public/lottie-ios\"",
+					"-kce-bcf=21",
+					"-kce-fla=3",
+					"-kce-bcf-fla-chance=21",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"AXIndicatorView\"",
+					"-l\"AXNavigationBackItemInjection\"",
+					"-l\"AXPracticalHUD\"",
+					"-l\"AXWebViewController\"",
+					"-l\"Aspects\"",
+					"-l\"AvoidCrash\"",
+					"-l\"BANetManager\"",
+					"-l\"DZNEmptyDataSet\"",
+					"-l\"HXPhotoPicker\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MCUIColorUtils\"",
+					"-l\"MJExtension\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"NJKWebViewProgress\"",
+					"-l\"SDWebImage\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"WRNavigationBar\"",
+					"-l\"YTKNetwork\"",
+					"-l\"YYCache\"",
+					"-l\"YYText\"",
+					"-l\"jcore-ios-1.2.1\"",
+					"-l\"jpush-ios-3.1.0\"",
+					"-l\"lottie-ios\"",
+					"-l\"resolv\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebKit\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+					"-lstdc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.xiaopaipai.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

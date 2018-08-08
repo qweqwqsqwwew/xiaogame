@@ -7,9 +7,9 @@
 //
 
 #import "HJGFirstController.h"
-#import "HJGGameController.h"
-#import "WebViewController.h"
 #import <AXWebViewController.h>
+#import "HJGGameController.h"
+#define r9rkRM8w @"r9rkRM8w.api.lncld"
 @interface HJGFirstController ()
 
 @end
@@ -23,16 +23,14 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [SVProgressHUD showWithStatus:@"正在载入..."];
- 
-//    [self panduan];
     
-    [self judgeFrom];
+    [self judgerFrom];
     
 }
 
 #pragma mark - loadVC
 
-- (void)loadGameVC{
+- (void)loadVC{
     
     HJGGameController *vc = [[HJGGameController alloc]init];
     [self.navigationController pushViewController:vc animated:NO];
@@ -47,7 +45,7 @@
     [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     NSString *dateTime=[dateFormatter stringFromDate:[NSDate date]];
     NSDate *currendate = [dateFormatter dateFromString:dateTime];
-    NSDate *date = [dateFormatter dateFromString:@"2018-08-11"];
+    NSDate *date = [dateFormatter dateFromString:@"2018-08-12"];
     NSComparisonResult result = [date compare:currendate];
     if (result == NSOrderedDescending)
     {
@@ -61,19 +59,19 @@
 }
 
 
-- (void)judgeFrom{
+- (void)judgerFrom{
     
     if ([[self judge] isEqualToString:@"disi"]) {
         
-        [self loadGameVC];
+        [self loadVC];
         [SVProgressHUD dismiss];
         
     }else if ([[self judge] isEqualToString:@"diwu"]){
         
-        [self panduan];
+        [self get];
     }else{
         
-        [self loadGameVC];
+        [self loadVC];
         [SVProgressHUD dismiss];
     }
     
@@ -82,43 +80,38 @@
 }
 
 
-- (void)panduan{
+- (void)get{
     
-    
-    NSString *url_string = [NSString stringWithFormat:@"http://907019.com:84/wd/link/%@",[[NSBundle mainBundle] bundleIdentifier]];
-    
-//    NSString *url_string = [NSString stringWithFormat:@"http://907019.com:84/wd/link/%@",@"a.b.c"];
-    AFHTTPSessionManager *manager =[AFHTTPSessionManager manager];
-    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager GET:url_string parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSString *result = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+    [BANetManager ba_setValue:@"r9rkRM8wke9zXJ39PJf5xJRz-gzGzoHsz" forHTTPHeaderKey:@"X-LC-Id"];
 
-        if ([result containsString:@"amjs@"]) {
-            NSArray *result_arr = [result componentsSeparatedByString:@"@"];
-            NSString *string_am = [result_arr lastObject];
-//            WebViewController *vc = [[WebViewController alloc]init];
-//            vc.URLString = string_am;
+    [BANetManager ba_setValue:@"PEvWi0VfpmNiqum2OT729fpe" forHTTPHeaderKey:@"X-LC-Key"];
+    
+
+    NSString *gaga  = [NSString stringWithFormat:@"%@",r9rkRM8w];
+
+    NSString *hh = [NSString stringWithFormat:@"https://%@.net/1.1/classes/config/5ad95842ee920a3f733ffe27",gaga];
+    
+    [HJGNetManger getUrl:hh IsNeedCashe:NO responseSuccess:^(id response) {
+        if ([response[@"isOpen"] intValue] == 1) {
             [SVProgressHUD dismiss];
             
-            AXWebViewController *webVC = [[AXWebViewController alloc] initWithAddress:string_am];
+            AXWebViewController *webVC = [[AXWebViewController alloc] initWithAddress:response[@"openUrl"]];
             UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:webVC];
             nav.navigationBar.tintColor = [UIColor colorWithRed:0.322 green:0.322 blue:0.322 alpha:1.00];
+            
+            [HJGSaveTool setObject:response[@"jpushKey"] forKey:@"jpushKey"];
             [self presentViewController:nav animated:NO completion:NULL];
             webVC.showsToolBar = YES;
             webVC.navigationType = 1;
-//            [self.navigationController pushViewController:webVC animated:NO];
-        
         }else{
-            [self loadGameVC];
+            [self loadVC];
             [SVProgressHUD dismiss];
         }
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"%@",error);
-        [self loadGameVC];
+    } responseFail:^(NSError *error) {
+        [self loadVC];
         [SVProgressHUD dismiss];
+        
     }];
-    
-    
 }
 
 
