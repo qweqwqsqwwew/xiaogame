@@ -1522,7 +1522,7 @@
 				DEVELOPMENT_TEAM = PH9FYADS5D;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xiaogame/xiaogame/Tools/PrefixHeader.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_1;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = xiaogame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1582,9 +1582,6 @@
 					"\"${PODS_ROOT}/Headers/Public/YYText\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/lottie-ios\"",
-					"-kce-bcf=21",
-					"-kce-fla=3",
-					"-kce-bcf-fla-chance=21",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1648,7 +1645,6 @@
 					"\"WebKit\"",
 					"-weak_framework",
 					"\"UserNotifications\"",
-					"-lstdc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaopaipai.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1667,7 +1663,7 @@
 				DEVELOPMENT_TEAM = PH9FYADS5D;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/xiaogame/xiaogame/Tools/PrefixHeader.pch";
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_1;
+				GCC_VERSION = "";
 				INFOPLIST_FILE = xiaogame/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1727,9 +1723,6 @@
 					"\"${PODS_ROOT}/Headers/Public/YYText\"",
 					"-isystem",
 					"\"${PODS_ROOT}/Headers/Public/lottie-ios\"",
-					"-kce-bcf=21",
-					"-kce-fla=3",
-					"-kce-bcf-fla-chance=21",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1793,7 +1786,6 @@
 					"\"WebKit\"",
 					"-weak_framework",
 					"\"UserNotifications\"",
-					"-lstdc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xiaopaipai.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
